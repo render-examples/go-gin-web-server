@@ -36,6 +36,7 @@ func StartGin() {
 	router.LoadHTMLGlob("resources/*.templ.html")
 	router.Static("/static", "resources/static")
 	router.GET("/", index)
+	router.GET("/index", index)
 	router.GET("/room/:roomid", roomGET)
 	router.POST("/room-post/:roomid", roomPOST)
 	router.GET("/stream/:roomid", streamRoom)
